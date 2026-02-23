@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hızlı Matematik</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      text-align:center;
+      background:#f2f4f8;
+      margin:0;
+      padding:20px;
+    }
+    h1{margin-bottom:5px;}
+    .student{
+      font-size:14px;
+      margin-bottom:20px;
+      color:#444;
+    }
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      max-width:400px;
+      margin:0 auto;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+    .question{
+      font-size:32px;
+      margin:20px 0;
+    }
+    .choices{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    button{
+      padding:15px;
+      font-size:18px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      background:#4f46e5;
+      color:white;
+    }
+    button:hover{
+      opacity:0.9;
+    }
+    .stats{
+      margin-top:20px;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Hızlı Matematik</h1>
+<div class="student">
+  Öğrenci:
+  <input id="studentName" placeholder="Adını yaz"/>
+  <button onclick="saveStudent()">Kaydet</button>
+</div>
+
+<div class="card">
+  <div class="question" id="question">Yükleniyor...</div>
+  <div class="choices" id="choices"></div>
+  <div class="stats">
+    Puan: <span id="score">0</span> |
+    Seri: <span id="streak">0</span>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
